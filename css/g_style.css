@@ -91,7 +91,7 @@
     margin-left: -60%;
 } */
 
-/* 모바일 게임 라디오버튼 */
+/* 아케이드게임 라디오버튼 */
 #ar_radio1:checked ~ .first{
     margin-left: 0;
 }
@@ -106,5 +106,13 @@
 }
 #ar_radio5:checked ~ .first{
     margin-left: -80%;
+}
+
+/* 온라인게임 라디오버튼 */
+#on_radio1:checked ~ .first{
+    margin-left: 0;
+}
+#on_radio2:checked ~ .first{
+    margin-left: -20%;
 }
 
