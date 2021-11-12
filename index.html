@@ -30,71 +30,11 @@
         <script type="text/javascript" src="./js/jquery.nicescroll.js"></script>
         <script type="text/javascript" src="./js/jquery.easypiechart.js"></script>
         <script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>
+        <link rel="stylesheet" href="./css/m_style.css">
+        <link rel="stylesheet" href="./css/g_style.css">
+        <script defer src="./js/m_script.js"></script>
 
         <style>
-            input[id*="popup"] {
-                display: none;
-            }
-            input[id*="popup"] + label {
-                z-index: 10;
-                display: inline-block;
-                width: 40px;
-                height: 10px;
-                padding:10px;                
-                background: #ffcd41;
-                color:#fff;            
-            }
-            /* 모달 관련 */
-            input[id*="popup"] + label + div {
-                opacity: 0;visibility: hidden;transition: all 1s;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 200;
-            }
-            /* 닫기 관련 */
-            input[id*="popup"]:checked + label + div {
-                opacity: 1;visibility: visible;
-            }            
-            input[id*="popup"] + label + div > div {
-                position: absolute;
-                top:50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                width: 500px;
-                height: 300px;
-                border-radius: 15px;
-                background: #fff;
-                z-index: 2;
-            }
-            input[id*="popup"] + label + div > div > label {
-                position: absolute;
-                top: 10%;
-                right: -2%;
-                transform: translate(40%,-40%);
-                padding: 20px;            
-                width: 50px;
-                height: 50px;
-                background: url( "./img/btn_close.png" ) no-repeat;
-                object-fit: fill;
-                
-                /* background: #dd5347 ; */
-                /* border-radius: 100%; */
-                z-index: 1;
-            }
-            input[id*="popup"] + label + div > label {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,.9);
-                z-index: 1;
-            }
-
-           
         /* google font*/
         @import 
         url('https://fonts.googleapis.com/css2?family=Ralyway&display=swap');
@@ -202,9 +142,9 @@
     <body>
         <div class="preloader" id="preloader">
             <div class="item">
-                  <!-- <img src="./img/loading.gif"> -->
-                  <img src="./img/load01.gif">
-              </div>
+            <!-- <img src="./img/loading.gif"> -->
+            <img src="./img/load01.gif">
+            </div>
         </div>
         
         <header>
@@ -268,7 +208,7 @@
                                 <img src="./img/about_icon02.png" alt="description /">
                             </p>
                         </div>
-                       <b>풍부한 경험을 지향합니다.</b><br>
+                        <b>풍부한 경험을 지향합니다.</b><br>
                         게임 기획 및 개발 경력 보유<br>
                         포토샵,일러스트레이터 사용<br>
                         에이스프라이트,클립스튜디오 사용<br>
@@ -280,7 +220,7 @@
                                 <img src="./img/about_icon02.png" alt="description /">
                             </p>
                         </div>
-                       <b>휴식 컨텐츠를 지향합니다.</b><br>
+                        <b>휴식 컨텐츠를 지향합니다.</b><br>
                         원소스 멀티유즈 스튜디오<br>
                         웹툰 및 캐릭터 제작 가능<br>
                         카카오 이모티콘 제작 및 런칭<br>
@@ -324,99 +264,284 @@
                 <div class="cnt_inner">
                     <h2>CONTENTS</h2>
                     <p class="border">✱</p>
-                    <!-- <div class="pf_btn">
-                        <button class="btn on" data-filter="*">all</button>
-                        <button class="btn" data-filter=".pc">Website</button>
-                        <button class="btn" data-filter=".game">Game</button>
-                        <button class="btn" data-filter=".drawing">Drawing</button>
-                        <button class="btn" data-filter=".piece">Piece</button>
-                    </div> -->
-                    <!-- <div class="grid"> -->
 
+<!-- 컨텐츠 갤러리 구성 -->
+        <div class="g_box">
+            <ul class="gallery">
+            <li>
+                <div class="g_content">
+                    <h2>모바일 게임</h2>
+                    <p>
+                        <br>모바일 게임 개발 및 서비스<br>  <br>                  
+                    </p>
+                    <div class="sns">                   
+                        <button data-modal-target="#modal_1">더보기</button>         
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="g_content">
+                    <h2>어플리케이션</h2>
+                    <p>
+                        <br>실생활에 도움이 되는<br> 재미있는 어플리케이션 개발 및 서비스<br>  <br>
+                    </p>
+                    <div class="sns">
+                        <button data-modal-target="#modal_2">더보기</button>                  
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="g_content">
+                    <h2>아케이드게임</h2>
+                    <p>
+                        <br>아케이드용 게임 제작<br> <br>
+                    </p>
+                    <div class="sns">
+                        <button data-modal-target="#modal_3">더보기</button>                 
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="g_content">
+                    <h2>온라인게임</h2>
+                    <p>
+                        <br>겜블 및 보드게임 게임 제작 및 서비스<br> <br>
+                    </p>
+                    <div class="sns">
+                        <button data-modal-target="#modal_4">더보기</button>                   
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="g_content">
+                    <h2>웹툰</h2>
+                    <p>
+                        <br>신선하고 탄탄한 스토리텔링과<br> 완성도 높은 만화 제작<br> <br>
+                    </p>
+                    <div class="sns">
+                        <!-- <button data-modal-target="#modal_5">더보기</button>                 -->
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="g_content">
+                    <h2>이모티콘</h2>
+                    <p>
+                        <br>라인과 카카오톡용 신규 캐릭터로 제작된<br> 다양한 이모티콘을 제작<br> <br>
+                    </p>
+                    <div class="sns">
+                        <!-- <button data-modal-target="#modal_6">더보기</button>                                 -->
+                    </div>
+                </div>
+            </li>            
+        </ul>
+        </div>                     
+    <!-- 모달팝업1 관련 -->
 
-                        <!-- 모달 팝업 관련 -->
-                        <!-- <input type="checkbox" id="popup">
-                        <label for="popup">view</label> -->
-                        <!-- <div>
-                            <div>
-                                <label for="popup"></label>
-                                <h1>테스트</h1> 
-                            </div>
-                            <label for="popup"></label>
-                        </div> -->
-                        <!--  -->
-<!-- PC 웹사이트 website -->
-<div class="g_box">
-    <ul class="gallery">
-       <li>
-           <div class="g_content">
-               <h2>모바일 게임</h2>
-               <p>
-                <br>모바일 게임 개발 및 서비스<br>  <br>                  
-               </p>
-               <div class="sns">                   
-                <button class="g_btn">Read more</button>                 
-               </div>
-           </div>
-       </li>
-       <li>
-           <div class="g_content">
-               <h2>어플리케이션</h2>
-               <p>
-                <br>실생활에 도움이 되는<br> 재미있는 어플리케이션 개발 및 서비스<br>  <br>
-               </p>
-               <div class="sns">
-                <button class="btn" data-filter=".pc">Read more</button>                    
-               </div>
-           </div>
-       </li>
-       <li>
-           <div class="g_content">
-               <h2>아케이드게임</h2>
-               <p>
-                <br>아케이드용 게임 제작<br> <br>
-               </p>
-               <div class="sns">
-                <button class="btn" data-filter=".pc">Read more</button>                   
-               </div>
-           </div>
-       </li>
-       <li>
-           <div class="g_content">
-               <h2>온라인게임</h2>
-               <p>
-                <br>겜블 및 보드게임 게임 제작 및 서비스<br> <br>
-               </p>
-               <div class="sns">
-                <button class="btn" data-filter=".pc">Read more</button>                    
-               </div>
-           </div>
-       </li>
-       <li>
-           <div class="g_content">
-               <h2>웹툰</h2>
-               <p>
-                <br>신선하고 탄탄한 스토리텔링과<br> 완성도 높은 만화 제작<br> <br>
-               </p>
-               <div class="sns">
-                <button class="btn" data-filter=".pc">Read more</button>                 
-               </div>
-           </div>
-       </li>
-       <li>
-           <div class="g_content">
-               <h2>이모티콘</h2>
-               <p>
-                <br>라인과 카카오톡용 신규 캐릭터로 제작된<br> 다양한 이모티콘을 제작<br> <br>
-               </p>
-               <div class="sns">
-                <button class="btn" data-filter=".pc">Read more</button>                                   
-               </div>
-           </div>
-       </li>            
-   </ul>
-</div>             
-     <!--  -->
+    <div class="modal" id="modal_1">
+        <div class="modal-header">
+            <div class="title">모바일 게임</div>            
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <!-- 모달 메인 바디 -->
+        <div class="modal-body">
+            <!-- 이미지 삽입 관련 -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio btn starts -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <!-- radio btn end -->
+        
+                    <!-- slide image start -->
+                    <div class="slide first">
+                        <img src="./img/mg_01.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/mg_02.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/mg_03.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/mg_04.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/mg_05.jpg" alt="">
+                    </div>
+                    <!-- slide image end -->
+        
+                </div>
+                <!-- manual navigation start  -->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
+                <!-- manual navigation end  -->
+            </div>    
+        <!-- 이미지 삽입 관련 -->
+        </div>
+        <!-- 모달 메인 바디 관련 끝 -->
+    </div>
+
+    <div id="m_overlay"></div>
+    <!-- 모달팝업1 관련 -->
+
+    <!-- 모달팝업2 관련 -->
+
+    <div class="modal" id="modal_2">
+        <div class="modal-header">
+            <div class="title">어플리케이션</div>            
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <!-- 모달 메인 바디 -->
+        <div class="modal-body">
+            <!-- 이미지 삽입 관련 -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio btn starts -->
+                    <input type="radio" name="radio-btn" id="b_radio1">
+                    <input type="radio" name="radio-btn" id="b_radio2">
+                    <input type="radio" name="radio-btn" id="b_radio3">                    
+                    <!-- radio btn end -->
+        
+                    <!-- slide image start -->
+                    <div class="slide first">
+                        <img src="./img/app_01.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/app_02.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/app_03.jpg" alt="">
+                    </div>                    
+                    <!-- slide image end -->
+        
+                </div>
+                <!-- manual navigation start  -->
+                <div class="navigation-manual">
+                    <label for="b_radio1" class="manual-btn"></label>
+                    <label for="b_radio2" class="manual-btn"></label>
+                    <label for="b_radio3" class="manual-btn"></label>                    
+                </div>
+                <!-- manual navigation end  -->
+            </div>    
+        <!-- 이미지 삽입 관련 -->
+        </div>
+        <!-- 모달 메인 바디 관련 끝 -->
+    </div>
+
+    <div id="m_overlay"></div>
+    <!-- 모달팝업2 관련 -->
+
+        <!-- 모달팝업3 관련 -->
+
+        <div class="modal" id="modal_3">
+            <div class="modal-header">
+                <div class="title">아케이드게임</div>            
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <!-- 모달 메인 바디 -->
+            <div class="modal-body">
+                <!-- 이미지 삽입 관련 -->
+                <div class="slider">
+                    <div class="slides">
+                        <!-- radio btn starts -->
+                        <input type="radio" name="radio-btn" id="ar_radio1">
+                        <input type="radio" name="radio-btn" id="ar_radio2">
+                        <input type="radio" name="radio-btn" id="ar_radio3">
+                        <input type="radio" name="radio-btn" id="ar_radio4">
+                        <input type="radio" name="radio-btn" id="ar_radio5">
+                        <!-- radio btn end -->
+            
+                        <!-- slide image start -->
+                        <div class="slide first">
+                            <img src="./img/ar_01.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/ar_02.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/ar_03.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/ar_04.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/ar_05.jpg" alt="">
+                        </div>
+                        <!-- slide image end -->
+            
+                    </div>
+                    <!-- manual navigation start  -->
+                    <div class="navigation-manual">
+                        <label for="ar_radio1" class="manual-btn"></label>
+                        <label for="ar_radio2" class="manual-btn"></label>
+                        <label for="ar_radio3" class="manual-btn"></label>
+                        <label for="ar_radio4" class="manual-btn"></label>
+                        <label for="ar_radio5" class="manual-btn"></label>
+                    </div>
+                    <!-- manual navigation end  -->
+                </div>    
+            <!-- 이미지 삽입 관련 -->
+            </div>
+            <!-- 모달 메인 바디 관련 끝 -->
+        </div>
+    
+        <div id="m_overlay"></div>
+        <!-- 모달팝업3 관련 -->
+
+       <!-- 모달팝업4 관련 -->
+
+       <div class="modal" id="modal_4">
+        <div class="modal-header">
+            <div class="title">온라인 보드게임</div>            
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <!-- 모달 메인 바디 -->
+        <div class="modal-body">
+            <!-- 이미지 삽입 관련 -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio btn starts -->
+                    <input type="radio" name="radio-btn" id="on_radio1">
+                    <input type="radio" name="radio-btn" id="on_radio2">
+                    
+                    <!-- radio btn end -->
+        
+                    <!-- slide image start -->
+                    <div class="slide first">
+                        <img src="./img/on_01.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/on_02.jpg" alt="">
+                    </div>
+                    
+                    <!-- slide image end -->
+        
+                </div>
+                <!-- manual navigation start  -->
+                <div class="navigation-manual">
+                    <label for="on_radio1" class="manual-btn"></label>
+                    <label for="on_radio2" class="manual-btn"></label>
+                    
+                </div>
+                <!-- manual navigation end  -->
+            </div>    
+        <!-- 이미지 삽입 관련 -->
+        </div>
+        <!-- 모달 메인 바디 관련 끝 -->
+    </div>
+
+    <div id="m_overlay"></div>
+    <!-- 모달팝업4 관련 -->
+
                 </div>
             </div>
         </section>
@@ -429,8 +554,7 @@
                 Thanks for visiting my Website.<br>
                 Copyright ⓒ 2021. Sunghun Kim All rights reserved.
             </div>
-        </footer>
-
+        </footer>       
         <script>
             $(function(){
                 var canvas = document.getElementById("canvas");
