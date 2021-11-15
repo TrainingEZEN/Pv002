@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -49,7 +51,7 @@
 
 #m_overlay {
     position: fixed;
-    opacity: 0; 
+    opacity: 0;
     transition: 200ms ease-in-out;
     top: 0;
     left: 0;
@@ -59,17 +61,7 @@
     pointer-events: none;
 }
 
-#m_overlay.active{
+#m_overlay.active {
     opacity: 1;
     pointer-events: all;
 }
-
-
-
-
-
-
-
-
-
-
